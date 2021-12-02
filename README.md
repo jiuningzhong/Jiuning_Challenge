@@ -83,6 +83,8 @@ Reference:
 	
 	Terratest
 	https://gist.github.com/doi-t/3a9701f353218b77a9ef3be178bbc370
+	
+	https://medium.com/rocket-mortgage-technology-blog/terraform-testing-using-terratest-e955b5675c23
 
 ----------------------------
 	
