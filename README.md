@@ -80,6 +80,9 @@ Reference:
 	
 	Configure HTTPS on AWS EC2 without a Custom Domain
 	https://bansalanuj.com/https-aws-ec2-without-custom-domain
+	
+	Terratest
+	https://gist.github.com/doi-t/3a9701f353218b77a9ef3be178bbc370
 
 ----------------------------
 	
