@@ -26,17 +26,18 @@ Security Group: sg-0277d5a51a3433bea
 ![image](https://user-images.githubusercontent.com/4203648/144354223-11551989-d047-414e-b4a6-cd2df134cce7.png)
 
 Commands to install certificate but failed due to 
-sudo amazon-linux-extras install nginx1 -y
-sudo systemctl enable nginx
-sudo systemctl start nginx
-sudo systemctl stop nginx
-sudo wget -r --no-parent -A 'epel-release-*.rpm' https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/
-sudo rpm -Uvh dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-*.rpm
-sudo yum-config-manager --enable epel*
-sudo yum install -y certbot 
-sudo yum install -y python-certbot-nginx
-sudo certbot certonly --standalone --debug -d your.domain.here
-sudo systemctl restart nginx
+
+	sudo amazon-linux-extras install nginx1 -y
+	sudo systemctl enable nginx
+	sudo systemctl start nginx
+	sudo systemctl stop nginx
+	sudo wget -r --no-parent -A 'epel-release-*.rpm' https://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/
+	sudo rpm -Uvh dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-*.rpm
+	sudo yum-config-manager --enable epel*
+	sudo yum install -y certbot 
+	sudo yum install -y python-certbot-nginx
+	sudo certbot certonly --standalone --debug -d your.domain.here
+	sudo systemctl restart nginx
 
 Error: 
 Error: urn:ietf:params:acme:error:rejectedIdentifier :: The server will not issu
