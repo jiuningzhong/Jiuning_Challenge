@@ -1,0 +1,20 @@
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-04902260ca3d33422 # Amazon Linux AMI in us-east-1
+      KeyName: ec2-instances
+      Tags:
+        - Key: Name
+          Value: My EC2 Instance
+        - Key: Owner
+          Value: Jiuning
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo yum update -y # update existing packages
+          sudo yum install -y httpd # install apache web server
+          sudo systemctl start httpd
+          sudo systemctl enable httpd
+          echo '<html><head><title>Hello World</title></head><body><h1>Hello World!</h1></body></html>' > /var/www/html/index.html
