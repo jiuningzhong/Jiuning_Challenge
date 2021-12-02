@@ -35,6 +35,8 @@ Configure HTTPS on AWS EC2 without a Custom Domain
 
 	https://18.207.204.47.nip.io/
 
+![image](https://user-images.githubusercontent.com/4203648/144360905-a31aff85-fce4-453b-b52b-8d095f3aa093.png)
+
 Option 2
 Commands to install certificate - Certbot:
 
