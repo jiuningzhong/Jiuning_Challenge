@@ -23,6 +23,8 @@ the web server.
 Add Inbound rules (HTTP, HTTPs on 80, 443)
 Security Group: sg-0277d5a51a3433bea 
 
+alb-redirect-only.yaml sets up inbound rules
+
 Commands to install certificate - Certbot:
 
 	sudo amazon-linux-extras install nginx1 -y
