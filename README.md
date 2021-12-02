@@ -39,7 +39,8 @@ Commands to install certificate:
 	sudo certbot certonly --standalone --debug -d your.domain.here
 	sudo systemctl restart nginx
 
-But failed due to: 
+But failed due to:
+
 Error: urn:ietf:params:acme:error:rejectedIdentifier :: The server will not issu
 e certificates for the identifier :: Error creating new order :: Cannot issue fo
 r "ec2-18-207-204-47.compute-1.amazonaws.com": The ACME server refuses to issue
