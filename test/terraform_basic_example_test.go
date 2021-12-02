@@ -38,4 +38,12 @@ func TestTerraformHelloWorldExample(t *testing.T) {
 
         assert.Equal(t, 200, statusCode)
         assert.NotNil(t, body)
+        
+        // Verify that we get back a 200 OK with the expected text. It
+        // takes ~1 min for the Instance to boot, so retry a few times.
+        status := 200
+        text := "Hello World!"
+        retries := 3
+        sleep := 3 * time.Second
+        http_helper.HttpGetWithRetry(t, url, &tlsConfig, status, text, retries, sleep)
 }
