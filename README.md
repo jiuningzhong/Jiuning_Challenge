@@ -23,9 +23,7 @@ the web server.
 Add Inbound rules (HTTP, HTTPs on 80, 443)
 Security Group: sg-0277d5a51a3433bea 
 
-![image](https://user-images.githubusercontent.com/4203648/144354223-11551989-d047-414e-b4a6-cd2df134cce7.png)
-
-Commands to install certificate:
+Commands to install certificate - Certbot:
 
 	sudo amazon-linux-extras install nginx1 -y
 	sudo systemctl enable nginx
@@ -38,15 +36,6 @@ Commands to install certificate:
 	sudo yum install -y python-certbot-nginx
 	sudo certbot certonly --standalone --debug -d your.domain.here
 	sudo systemctl restart nginx
-
-But failed due to:
-
-Error: urn:ietf:params:acme:error:rejectedIdentifier :: The server will not issu
-e certificates for the identifier :: Error creating new order :: Cannot issue fo
-r "ec2-18-207-204-47.compute-1.amazonaws.com": The ACME server refuses to issue
-a certificate for this domain name, because it is forbidden by policy
-
-![image](https://user-images.githubusercontent.com/4203648/144354486-ccd864e4-06b8-458d-98e7-66443e2c61b1.png)
 
 
 • Develop and apply automated tests to validate the correctness of the server configuration.
@@ -69,4 +58,8 @@ site. Include the program in the repo above.
 	
 	
 Reference:
+	HTTPS on Amazon Linux with Nginx - Certbot
 	https://sammeechward.com/https-on-amazon-linux-with-nginx/
+	
+	Configure HTTPS on AWS EC2 without a Custom Domain
+	https://bansalanuj.com/https-aws-ec2-without-custom-domain
