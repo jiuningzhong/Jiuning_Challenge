@@ -25,7 +25,7 @@ Security Group: sg-0277d5a51a3433bea
 
 ![image](https://user-images.githubusercontent.com/4203648/144354223-11551989-d047-414e-b4a6-cd2df134cce7.png)
 
-Commands to install certificate but failed due to 
+Commands to install certificate:
 
 	sudo amazon-linux-extras install nginx1 -y
 	sudo systemctl enable nginx
@@ -39,7 +39,7 @@ Commands to install certificate but failed due to
 	sudo certbot certonly --standalone --debug -d your.domain.here
 	sudo systemctl restart nginx
 
-Error: 
+But failed due to: 
 Error: urn:ietf:params:acme:error:rejectedIdentifier :: The server will not issu
 e certificates for the identifier :: Error creating new order :: Cannot issue fo
 r "ec2-18-207-204-47.compute-1.amazonaws.com": The ACME server refuses to issue
