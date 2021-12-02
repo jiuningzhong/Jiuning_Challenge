@@ -3,7 +3,10 @@
 For this project, please think about how you would architect a scalable and secure static web
 application in AWS.
 
-S3 
+Architecture
+
+![image](https://user-images.githubusercontent.com/4203648/144360258-28570e65-b86a-4a50-ab9e-4e9fa181f13c.png)
+
 
 • Create and deploy a running instance of a web server using a configuration management
 tool of your choice. The web server should serve one page with the following content.
@@ -22,11 +25,17 @@ any http requests are redirected to https. This should be automated using a conf
 management tool of your choice and you should feel free to use a self-signed certificate for
 the web server.
 
-Add Inbound rules (HTTP, HTTPs on 80, 443)
+Add Inbound rules (HTTP, HTTPs on 80, 443) to Load Balancers
 Security Group: sg-0277d5a51a3433bea 
 
 alb-redirect-only.yaml sets up inbound rules
 
+Option 1
+Configure HTTPS on AWS EC2 without a Custom Domain
+
+	https://18.207.204.47.nip.io/
+
+Option 2
 Commands to install certificate - Certbot:
 
 	sudo amazon-linux-extras install nginx1 -y
